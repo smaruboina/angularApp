@@ -1,0 +1,51 @@
+h2{
+    color:green;
+}
+h1{
+    color:orangered;
+    text-align: center;
+}
+nav{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ul.nav{
+    list-style: none;
+}
+.add, .show{
+    background-color: #fae4a1;
+    min-height: 25px;
+    border: 1px solid #4db6ac;
+    position: relative;
+    margin-right: 1265px;
+    margin-left: -30px;
+    font-size: 16px;
+    font-family: cursive;
+    padding: 5px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
