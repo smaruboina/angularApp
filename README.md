@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Angular Controllers</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-</head>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="menu.css">
 <body>
- <div ng-app="myApp" ng-controller="myCntrl">
-    Select the course: <button ng-click="java();">Java</button>
-     <button ng-click="angular();">Angular JS</button>
-     <button ng-click="html();">HTML</button>
-     <p>Selected Course is:{{selectedItem}}</p>
- </div>
- <script>
-     var myList=angular.module('myApp',[]);
-     myList.controller('myCntrl',function ($scope) {
-        $scope.selectedItem='none';
-        $scope.java=function () {
-            $scope.selectedItem='Java';
-        };
-         $scope.angular=function () {
-             $scope.selectedItem='Angular JS';
-         };
-         $scope.html=function () {
-             $scope.selectedItem='Html';
-         };
-     });
 
- </script>
+<div id="menu" ng-app>
+    <nav class="{{active}}" ng-click="$event.preventDefault()">
+
+        <!-- When a link in the menu is clicked, we set the active variable -->
+
+        <a href="#" class="home" ng-click="active='home'">Home</a>
+        <a href="#" class="projects" ng-click="active='projects'">Projects</a>
+        <a href="#" class="services" ng-click="active='services'">Services</a>
+        <a href="#" class="contact" ng-click="active='contact'">Contact</a>
+    </nav>
+    <p ng-show="active">You choose<b>{{active}}</b></p>
+    <p ng-hide="active">Click on Menu!!</p>
+</div>
+
+
+
 </body>
 </html>
